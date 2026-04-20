@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recommendations</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="results-page">
+    <h1>🍴 Recommended Restaurants</h1>
+
+    {% if msg %}
+        <p>{{ msg }}</p>
+    {% endif %}
+
+    <div class="cards">
+
+    {% for r in results %}
+        <div class="card">
+            <h2>{{ r.name }}</h2>
+            <p><strong>Cuisine:</strong> {{ r.cuisines }}</p>
+            <p><strong>Rating:</strong> ⭐ {{ r.rating }}</p>
+            <p><strong>Cost:</strong> ₹ {{ r.cost }} for two</p>
+        </div>
+    {% endfor %}
+
+    </div>
+
+    <a href="/" class="back-btn">← Search Again</a>
+</div>
+
+</body>
+</html>

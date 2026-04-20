@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Recommendation</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="overlay">
+        <div class="container">
+            <h1>🍽 Restaurant Recommendation System</h1>
+            <p>Find the best restaurants based on your taste</p>
+
+            <form action="/recommend" method="POST" class="search-box">
+                <input type="text" name="restaurant" placeholder="Search restaurant or cuisine..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
